@@ -3,6 +3,11 @@ from ultralytics import YOLO
 from PIL import Image
 import numpy as np
 
+import sys
+sys.path.append('./ultralytics/yolo')
+
+from utils.checks import check_requirements
+
 model = YOLO("yolov8n.pt")
 
 st.title("YOLO Detection")
